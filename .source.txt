@@ -1,0 +1,4 @@
+/home/whiffingj/.whiffingenv/git-helpers.sh
+/home/whiffingj/.whiffingenv/prompt.sh
+/home/whiffingj/.whiffingenv/terminal-helpers.sh
+/home/whiffingj/.whiffingenv/X-Forwarding.sh
