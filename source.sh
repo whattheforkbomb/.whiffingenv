@@ -1,7 +1,8 @@
 # source files that have been listed for sourcing
 
 # check if already loaded
-[ ! -z "$_WHIFFINGENV_SOURCE_LIST_PATH" ] && return 0
+[ ! -z "$_SOURCE_SOURCED" ] && [ "$_SOURCE_SOURCED" != "RELOAD" ] && return 0
+_SOURCE_SOURCED=TRUE
 _WHIFFINGENV_SOURCE_LIST_PATH=/home/whiffingj/.whiffingenv/.source.txt
 
 # load logging helpers

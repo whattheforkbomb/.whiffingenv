@@ -1,11 +1,11 @@
 # log funcs
 
 # no need to resource if already done so
-[ ! -z "$_LOG_HELPERS_SOURCED" ] && return 0
+[ ! -z "$_LOG_HELPERS_SOURCED" ] && [ "$_LOG_HELPERS_SOURCED" != "RELOAD" ] && return 0
 export _LOG_HELPERS_SOURCED=TRUE
 
 function log() { # basically alias of echo to stderr
-    printf "$@" >&2
+    echo -e "$@" >&2
 }
 
 function toggle_debug_logging() {
@@ -13,17 +13,17 @@ function toggle_debug_logging() {
 }
 
 function log_debug() {
-    [ "$LOG_DEBUG" = "TRUE" ] && log "[DEBUG] -" "$@"
+    [ "$LOG_DEBUG" = "TRUE" ] && log "[DEBUG] - $@"
 }
 
 function log_info() {
-    log "[INFO] -" "$@"
+    log "[INFO] - $@"
 }
 
 function log_warn() {
-    log "[WARN] -" "$@"
+    log "[WARN] - $@"
 }
 
 function log_err() {
-    log "[ERROR] -" "$@"
+    log "[ERROR] - $@"
 }
