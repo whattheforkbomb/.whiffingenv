@@ -23,6 +23,6 @@ get_or_set_display > /dev/null
 if [ "$DISPLAY" = ":0" ] ; then
     echo "Unable to determine display for X-Forwarding..."
 else
-    export LIBGL_ALWAYS_INDIRECT=1
+    export LIBGL_ALWAYS_INDIRECT=0
     echo "X-Forwarding Display set to: $DISPLAY..."
 fi
