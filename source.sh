@@ -46,6 +46,6 @@ function add_files_to_source_list() {
     unset FILES_TO_SOURCE FILE_SOURCE_ERRORS CURRENT_SOURCE_LIST
 }
 
-source_files $(cat "$_WHIFFINGENV_SOURCE_LIST_PATH")
+source_files $(cat "$_WHIFFINGENV_SOURCE_LIST_PATH" | sed "s|\$HOME|$HOME|")
 
 ## TODO - Add means to add files based on current dir (need to find full path based on current dir & selected files...)
