@@ -17,3 +17,4 @@ function get_active_python_version() {
 alias con-a="conda activate"
 alias con-d="conda deactivate"
 alias con-e=get_active_conda_env
+alias jl=jupyter-lab
