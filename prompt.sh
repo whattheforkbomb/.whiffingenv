@@ -77,7 +77,7 @@ function get_prompt() {
     PROMPT_PYTHON_STATUS="$(_prompt_get_python_info)"
     PROMPT_BG_JOBS_COUNT="$(_prompt_get_bg_jobs_count)"
     
-    printf "${_PROMPT_DEFAULT_FG}[${HOSTNAME}] $(pwd)\n" # Location Info (chroot, machine, & current dirtectory)
+    printf "${_PROMPT_DEFAULT_FG}[${HOSTNAME}${WSL_DISTRO_NAME:+ - $WSL_DISTRO_NAME}] $(pwd)\n" # Location Info (chroot, machine, & current dirtectory)
     [ "${_PROMPT_SHOW_EXTRA_INFO}" = "TRUE" ] && printf "[$(date +"%D %T (%Z)")] ${_PROMPT_DEFAULT_FG}${debian_chroot:+[$debian_chroot] }${PROMPT_BG_JOBS_COUNT:+[$PROMPT_BG_JOBS_COUNT] }${PROMPT_GIT_STATUS:+[$PROMPT_GIT_STATUS] }${PROMPT_PYTHON_STATUS:+[$PROMPT_PYTHON_STATUS]}\n" # Meta info
     
     PROMPT_REMINDERS="$(get_reminder)"
