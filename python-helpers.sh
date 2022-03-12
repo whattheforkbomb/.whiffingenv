@@ -18,3 +18,4 @@ alias con-a="conda activate"
 alias con-d="conda deactivate"
 alias con-e=get_active_conda_env
 alias jl=jupyter-lab
+alias jl-colab="jl --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0"
