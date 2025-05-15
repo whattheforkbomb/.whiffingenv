@@ -27,3 +27,5 @@ alias gp="git push"
 alias gpo="gp origin"
 alias gpoc='gpo "$(get_current_branch)"'
 alias gcm="git commit -m"
+alias gcom=gcm
+alias gadd="git add -i"
